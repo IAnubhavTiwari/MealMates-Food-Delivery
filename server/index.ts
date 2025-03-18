@@ -7,6 +7,8 @@ import connectDB from './db/connectDB';
 import userRoute from './routes/user.route';
 import restaurantRoute from './routes/restaurant.route';
 import menuRoute from './routes/menu.route';
+import orderRoute from './routes/order.route';
+
 dotenv.config();
 const app = express();
 
@@ -29,6 +31,7 @@ app.use(cors(corsOptions))
 app.use("/api/v1/user", userRoute);
 app.use("/api/v1/restaurant", restaurantRoute);
 app.use("/api/v1/menu", menuRoute);
+app.use("/api/v1/order", orderRoute);
 
 
 
